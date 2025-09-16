@@ -158,8 +158,14 @@ h1 {
 /* ============================================== */
 
 @media (max-width: 768px) {
-    /* THIS IS THE FIX: Allow the body and main container to scroll */
-    body, .background-container {
+    /* THIS IS THE CRUCIAL FIX */
+    body {
+        display: block; /* Turn OFF flexbox centering */
+        height: auto;
+        overflow-y: auto; /* Ensure vertical scrolling is ON */
+    }
+    
+    .background-container {
         height: auto;
         min-height: 100vh;
         overflow: visible;
@@ -199,4 +205,5 @@ h1 {
         gap: 10px; /* Add space between the text and button */
     }
 }
+
 
