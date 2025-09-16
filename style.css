@@ -152,3 +152,41 @@ h1 {
 .download-button:hover {
     background-color: #218838;
 }
+
+/* ============================================== */
+/* ==   ✨ RESPONSIVE STYLES FOR PHONES ✨   == */
+/* ============================================== */
+
+@media (max-width: 768px) {
+    body {
+        overflow: auto; /* Allow scrolling on small devices */
+    }
+    
+    .content-wrapper {
+        justify-content: flex-start; /* Align content to the top */
+        min-height: auto; /* Let content define the height */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .university-logo {
+        width: 100px; /* Make logo smaller */
+    }
+
+    h1 {
+        font-size: 1.6em; /* Make title text smaller */
+    }
+    
+    .search-section {
+        padding: 15px; /* Reduce padding in the search box */
+    }
+
+    .search-box {
+        flex-direction: column; /* Stack search input and button vertically */
+    }
+    
+    .result-item {
+        flex-direction: column; /* Stack result text and download button vertically */
+        align-items: flex-start; /* Align items to the left */
+        gap: 10px; /* Add space between the text and button */
+    }
+}
