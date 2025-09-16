@@ -17,6 +17,7 @@ const questionPapers = [
         year: 2022,
         title: 'Data Structures Question Paper 2022',
         url: 'https://github.com/PRAKASHTHAS/old-question-papers/blob/main/Data%20Structures-2022.pdf'
+                     
     },
     {
         subject: 'Data Structures',
@@ -96,11 +97,13 @@ searchButton.addEventListener('click', () => {
 const contactModal = document.getElementById("contactModal");
 const foundersModal = document.getElementById("foundersModal");
 const helpModal = document.getElementById("helpModal");
+const aboutCollegeModal = document.getElementById("aboutCollegeModal"); // New modal
 
 // Get the button elements
 const contactBtn = document.getElementById("contactBtn");
 const foundersBtn = document.getElementById("foundersBtn");
 const helpBtn = document.getElementById("helpBtn");
+const aboutCollegeBtn = document.getElementById("aboutCollegeBtn"); // New button
 
 // Get all the close buttons
 const closeBtns = document.getElementsByClassName("close-btn");
@@ -110,9 +113,12 @@ function openModal(modal) {
     modal.style.display = "block";
 }
 
-// Function to close a modal
-function closeModal(modal) {
-    modal.style.display = "none";
+// Function to close all modals
+function closeAllModals() {
+    contactModal.style.display = "none";
+    foundersModal.style.display = "none";
+    helpModal.style.display = "none";
+    aboutCollegeModal.style.display = "none";
 }
 
 // Event listeners for the buttons
@@ -125,25 +131,20 @@ foundersBtn.onclick = function() {
 helpBtn.onclick = function() {
     openModal(helpModal);
 }
+aboutCollegeBtn.onclick = function() {
+    openModal(aboutCollegeModal);
+}
 
 // Event listener for all close buttons
 for (let i = 0; i < closeBtns.length; i++) {
     closeBtns[i].onclick = function() {
-        closeModal(contactModal);
-        closeModal(foundersModal);
-        closeModal(helpModal);
+        closeAllModals();
     }
 }
 
 // Close the modal if the user clicks anywhere outside of the modal content
 window.onclick = function(event) {
-    if (event.target == contactModal) {
-        closeModal(contactModal);
-    }
-    if (event.target == foundersModal) {
-        closeModal(foundersModal);
-    }
-    if (event.target == helpModal) {
-        closeModal(helpModal);
+    if (event.target == contactModal || event.target == foundersModal || event.target == helpModal || event.target == aboutCollegeModal) {
+        closeAllModals();
     }
 }
