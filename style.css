@@ -1,33 +1,102 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333; /* Default text color */
+    overflow: hidden; /* Hide scrollbars if content slightly overflows */
+    height: 100vh; /* Full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 }
 
-.container {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/* Background gradient or diagonal split */
+.background-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.top-left-corner, .bottom-right-corner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.top-left-corner {
+    background-color: #0056b3; /* Darker Blue from your image */
+    clip-path: polygon(0 0, 100% 0, 0 100%); /* Creates the top-left triangle */
+    z-index: 1;
+}
+
+.bottom-right-corner {
+    background-color: #FFD700; /* Gold/Yellow from your image */
+    clip-path: polygon(100% 0, 100% 100%, 0 100%); /* Creates the bottom-right triangle */
+    z-index: 0; /* Ensures it's behind the blue */
+}
+
+/* Content Wrapper to center everything on top of the background */
+.content-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 700px; /* Adjust as needed */
     text-align: center;
-    width: 80%;
-    max-width: 600px;
+    z-index: 2; /* Ensures content is above the background */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes university details to top, search to bottom */
+    min-height: 80vh; /* Adjust height to give space for elements */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.university-details {
+    flex-grow: 1; /* Allows it to take up available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically within its space */
+    align-items: center;
+    margin-bottom: 30px; /* Space between university details and search */
+}
+
+.university-logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px;
 }
 
 h1 {
-    color: #0056b3;
+    color: #FFD700; /* Yellow text for the university name */
+    font-size: 2.5em; /* Larger font size */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds some shadow for readability */
+    line-height: 1.2; /* Spacing between lines */
+    margin: 0; /* Remove default margin */
+}
+
+.search-section {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Take full width of content-wrapper */
+    box-sizing: border-box;
+}
+
+.search-instruction {
+    color: #0056b3; /* Blue text for instruction */
+    font-size: 1.1em;
+    margin-bottom: 15px;
 }
 
 .search-box {
     display: flex;
     gap: 10px;
-    margin-top: 20px;
+    margin-bottom: 20px; /* Space below search box */
 }
 
 #searchInput {
@@ -52,25 +121,32 @@ h1 {
     background-color: #0056b3;
 }
 
+/* Results styling (keep as is) */
 .result-item {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: #f0f8ff; /* Light blue background for result items */
+    border: 1px solid #cceeff; /* Light blue border */
     border-radius: 5px;
     padding: 15px;
-    margin-top: 15px;
+    margin-top: 10px;
     text-align: left;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.result-item:first-child {
+    margin-top: 0; /* No top margin for the very first result */
 }
 
 .download-button {
     text-decoration: none;
     background-color: #28a745;
     color: white;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-radius: 5px;
     font-weight: bold;
+    font-size: 0.9em;
 }
 
 .download-button:hover {
