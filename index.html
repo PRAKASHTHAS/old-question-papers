@@ -3,22 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question Paper Portal</title>
+    <title>Dhanalakshmi Srinivasan Question Papers</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>🎓 Question Paper Portal</h1>
-        <p>Search for subjects like Physics, Chemistry, Maths, etc.</p>
-        
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Enter subject name...">
-            <button id="searchButton">Search</button>
-        </div>
+    <div class="background-container">
+        <div class="top-left-corner"></div>
+        <div class="bottom-right-corner"></div>
 
-        <div id="resultsContainer">
+        <div class="content-wrapper">
+            <div class="university-details">
+                <img src="dhanalakshmi_srinivasan_logo.png" alt="Dhanalakshmi Srinivasan University Logo" class="university-logo">
+                <h1>DHANALAKSHMI SRINIVASAN <br> ENGINEERING COLLEGE <br> PERAMBALUR (AUTONOMOUS)</h1>
             </div>
+
+            <div class="search-section">
+                <p class="search-instruction">Search for subjects like Cloud Computing, Data Structures, etc.</p>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Enter subject name...">
+                    <button id="searchButton">Search</button>
+                </div>
+                <div id="resultsContainer">
+                    </div>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
