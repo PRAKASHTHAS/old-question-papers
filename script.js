@@ -4,50 +4,50 @@ const questionPapers = [
         subject: 'Cloud Computing',
         year: 2023,
         title: 'Cloud Computing Question Paper 2023',
-        url: 'https://github.com/PRAKASHTHAS/old-question-papers/blob/main/Cloud%20Computing-2023.pdf'
+        url: 'https://github.com/PRAKASHTHAS/old-question-papers/raw/main/Cloud%20Computing-2023.pdf'
     },
     {
         subject: 'Cloud Computing',
         year: 2024,
         title: 'Cloud Computing Question Paper 2024',
-        url: 'https://github.com/PRAKASHTHAS/old-question-papers/blob/main/Cloud%20Computing-2024.pdf'
+        url: 'https://github.com/PRAKASHTHAS/old-question-papers/raw/main/Cloud%20Computing-2024.pdf'
     },
     {
         subject: 'Data Structures',
         year: 2022,
         title: 'Data Structures Question Paper 2022',
-        url: 'https://github.com/PRAKASHTHAS/old-question-papers/blob/main/Data%20Structures-2022.pdf'
+        url: 'https://github.com/PRAKASHTHAS/old-question-papers/raw/main/Data%20Structures-2022.pdf'
                      
     },
     {
         subject: 'Data Structures',
         year: 2024,
         title: 'Data Structures Question Paper 2024',
-        url: 'https://github.com/PRAKASHTHAS/old-question-papers/blob/main/Data%20Structures-2024.pdf'
+        url: 'https://github.com/PRAKASHTHAS/old-question-papers/raw/main/Data%20Structures-2024.pdf'
     },
     {
         subject: 'Database Management Systems',
         year: 2023,
         title: 'Database Management Systems Paper 2023',
-        url: 'https://github.com/PRAKASHTHAS/old-question-papers/blob/main/Database%20Management%20Systems-2023.pdf'
+        url: 'https://github.com/PRAKASHTHAS/old-question-papers/raw/main/Database%20Management%20Systems-2023.pdf'
     },
     {
         subject: 'Database Management Systems',
         year: 2024,
         title: 'Database Management Systems Paper 2024',
-        url: 'https://github.com/PRAKASHTHAS/old-question-papers/blob/main/Database%20Management%20Systems-2024.pdf'
+        url: 'https://github.com/PRAKASHTHAS/old-question-papers/raw/main/Database%20Management%20Systems-2024.pdf'
     },
     {
         subject: 'Web Technology',
         year: 2019,
         title: 'Web Technology Question Paper 2019',
-        url: 'https://github.com/PRAKASHTHAS/old-question-papers/blob/main/web%20technology-2019.pdf'
+        url: 'https://github.com/PRAKASHTHAS/old-question-papers/raw/main/web%20technology-2019.pdf'
     },
     {
         subject: 'Web Technology',
         year: 2020,
         title: 'Web Technology Question Paper 2020',
-        url: 'https://github.com/PRAKASHTHAS/old-question-papers/blob/main/web%20technology-2020.pdf.pdf'
+        url: 'https://github.com/PRAKASHTHAS/old-question-papers/raw/main/web%20technology-2020.pdf.pdf'
     }
 ];
 
@@ -148,3 +148,4 @@ window.onclick = function(event) {
         closeAllModals();
     }
 }
+
